@@ -1,0 +1,14 @@
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: prowlarr
+  annotations:
+    nfs.io/storage-path: "data01/prowlarr"
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi

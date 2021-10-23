@@ -1,0 +1,35 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: flaresolverr
+  labels:
+    app: flaresolverr
+    part-of: prowlarr
+  annotations:
+    keel.sh/policy: force
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@hourly"
+    keel.sh/match-tag: true
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaresolverr
+      part-of: prowlarr
+  template:
+    metadata:
+      labels:
+        app: flaresolverr
+        part-of: prowlarr
+    spec:
+      containers:
+      - name: flaresolverr
+        image: ghcr.io/flaresolverr/flaresolverr:v1.2.9
+        ports:
+        - name: flaresolverr
+          containerPort: 8191
+        env:
+        - name: LOG_LEVEL
+          value: "info"
+        - name: CAPTCHA_SOLVER
+          value: "hcaptcha-solver"
