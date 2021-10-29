@@ -44,7 +44,7 @@ spec:
           limits:
             memory: 256Mi
           requests:
-            memory: 64Mi
+            memory: 128Mi
         readinessProbe:
           tcpSocket:
             port: prowlarr
