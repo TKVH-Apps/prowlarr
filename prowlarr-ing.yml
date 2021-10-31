@@ -17,9 +17,9 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: prowlarr
+            name: ak-outpost-proxy01
             port:
-              number: 9696
+              number: 9000
   tls:
   - hosts:
     - <path:apps-kv/data/prowlarr/config#HOST>
