@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: prowlarr
+  annotations:
+    linkerd.io/inject: enabled

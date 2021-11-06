@@ -6,5 +6,6 @@ resources:
   - prowlarr-svc.yml
   - prowlarr-pvc.yml
   - prowlarr-ing.yml
+  - prowlarr-ns.yml
   - flaresolverr-deploy.yml
   - flaresolverr-svc.yml
