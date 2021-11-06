@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: prowlarr
-        image: ghcr.io/linuxserver/prowlarr:develop
+        image: ghcr.io/linuxserver/prowlarr:nightly
         ports:
         - name: prowlarr
           containerPort: 9696
