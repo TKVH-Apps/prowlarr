@@ -35,6 +35,6 @@ spec:
           value: "hcaptcha-solver"
         resources:
           limits:
-            memory: 256Mi
+            memory: 300Mi
           requests:
-            memory: 128Mi
+            memory: 300Mi
