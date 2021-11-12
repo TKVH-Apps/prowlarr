@@ -45,7 +45,7 @@ spec:
             memory: 256Mi
             cpu: "100m"
           requests:
-            memory: 128Mi
+            memory: 200Mi
         readinessProbe:
           tcpSocket:
             port: prowlarr
