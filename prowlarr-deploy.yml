@@ -5,11 +5,6 @@ metadata:
   labels:
     app: prowlarr
     part-of: prowlarr
-  annotations:
-    keel.sh/policy: force
-    keel.sh/trigger: poll
-    keel.sh/pollSchedule: "@hourly"
-    keel.sh/match-tag: true
 spec:
   replicas: 1
   selector:
@@ -24,7 +19,7 @@ spec:
     spec:
       containers:
       - name: prowlarr
-        image: ghcr.io/linuxserver/prowlarr:develop
+        image: ghcr.io/linuxserver/prowlarr:develop-version-0.2.0.1426
         ports:
         - name: prowlarr
           containerPort: 9696
