@@ -5,11 +5,6 @@ metadata:
   labels:
     app: flaresolverr
     part-of: prowlarr
-  annotations:
-    keel.sh/policy: force
-    keel.sh/trigger: poll
-    keel.sh/pollSchedule: "@hourly"
-    keel.sh/match-tag: true
 spec:
   replicas: 1
   selector:
@@ -24,7 +19,7 @@ spec:
     spec:
       containers:
       - name: flaresolverr
-        image: ghcr.io/flaresolverr/flaresolverr:latest
+        image: ghcr.io/flaresolverr/flaresolverr:v2.1.0
         ports:
         - name: flaresolverr
           containerPort: 8191
