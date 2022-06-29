@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: prowlarr
-        image: ghcr.io/linuxserver/prowlarr:0.3.0-nightly
+        image: ghcr.io/linuxserver/prowlarr:0.4.2-nightly
         ports:
         - name: prowlarr
           containerPort: 9696
@@ -37,9 +37,9 @@ spec:
           mountPath: /config
         resources:
           limits:
-            memory: 256Mi
+            memory: 400Mi
           requests:
-            memory: 200Mi
+            memory: 350Mi
         readinessProbe:
           tcpSocket:
             port: prowlarr
